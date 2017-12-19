@@ -2,11 +2,35 @@ doctype html
 html
 	head
 		meta(charset="utf-8")
-		title Connoisseur International
+		title INSIDE WINDOWS
 		meta(content="width=device-width, initial-scale=1" name="viewport")
 		meta(content="ie=edge" http-equiv="x-ua-compatible")
-		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700",900, rel="stylesheet", type="text/css")
-		link(rel='stylesheet' href='assets/css/style-dark.css')
-		
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Cuprum:400,700", rel="stylesheet")
+		link(rel='stylesheet' href='assets/css/style.css')
 	body
+		include common/header.pug
+		main
+			include common/ordering.pug
+			include common/video.pug
+			include common/action.pug 
+			include common/catalog.pug
+			hr.line
+			include common/popular.pug
+
 		
+		.container
+			.row
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+				.col-md-1.b-b 2
+		script(src="assets/js/app.js")

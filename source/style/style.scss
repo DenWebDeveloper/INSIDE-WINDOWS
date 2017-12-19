@@ -1,1 +1,381 @@
-@import "bootstrap.scss";
+@import "bootstrap/bootstrap.scss";
+@import "сommon/my-swiper.scss";
+
+	@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+
+body {
+	background: transparent url(../img/bg-body.jpg) 0 0;
+}
+
+.btn-green {
+  background-color: rgb(67, 170, 38);
+  box-shadow: inset 0px -3px 0px 0px rgba(44, 138, 18, 0.004);
+  font-family: "Cuprum", "Roboto","Arial",sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+      padding: 0.275rem 1.15rem;
+  text-transform: uppercase;
+}
+
+#header .bg-white {
+	background-color: #fff;
+	color:  #2f3131;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: 900;
+	img {
+		margin-right: 4px;
+		width: 48px;
+		height: 48px;
+	}
+
+	.header__logo {
+		color: #4f555a;
+		font-size: 26/16 + 0rem;
+	}
+
+	.intro {
+		padding-left: 3rem;
+		font-size: 0.875rem;
+	}
+
+	.number {
+		padding-left: 39px;
+		font-family: "Cuprum", "Roboto","Arial",sans-serif;
+		font-weight: 400;
+		font-size: 26px;
+		color: #2f3131;
+	}
+
+	.block-right  {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.search__input {
+		width: 10px;
+	}
+} 
+
+#header .bg-green {
+	background-color: #3fa825;
+
+	.navbar {
+		padding: 0;
+	}
+
+	a {
+		font-size: 1.1rem; 
+		font-family: "Cuprum", "Roboto","Arial",sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 10px 27.5px;
+		border: 0.5px solid #fff;
+		border-top-width: 0px;
+		border-bottom-width: 0px; 
+		color: #fff;
+
+		&:hover {
+			color:  #3fa825;
+			background-color: #fff;
+		}
+	}
+}
+
+#ordering {
+	margin-top: -92px;
+	z-index: 2;
+	.col-lg-5 img {
+		width: 480px;
+		height: 370px;
+	}
+
+	.ordering__wrapper {
+		min-height: 320px;
+		background-color: #fff;
+		text-align: center;
+
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+
+#action {
+	margin-top: 20px;
+	color: #fff;
+	background: transparent url(../img/bg-action.jpg) 0 0 no-repeat;
+	
+	.action-end {
+		font-size: 13.7/16 + 0rem;
+	}
+	h2 {
+		margin-top: 34px;
+		text-transform: uppercase;
+		font-family: "Cuprum", "Roboto","Arial",sans-serif;
+		font-weight: 600;
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+
+	a {
+		display: inline-block;
+    margin-bottom: 20px;
+		color: #fff600;
+		font-weight: 600;
+	}
+
+	#clockdiv{
+    color: #43aa26;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Cuprum", "Roboto","Arial",sans-serif;
+}
+
+#clockdiv > div{
+	margin-top: 10px;
+	margin-bottom: 38px;
+	margin-right: 12px;
+	padding: 10px 20px;
+    border-radius: 3px;
+    background: #fff;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    font-size: 56px;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.smalltext{
+    font-size: 16px;
+}
+
+.img-block {
+	text-align: center;
+}
+}
+
+
+#catalog {
+	padding-top: 34px;
+	text-align: center;
+	h2 {
+		font-family: "Cuprum", "Roboto","Arial",sans-serif;
+		font-weight: 600;
+		font-size: 36px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 29px;
+	}
+
+	h6 {
+		font-weight: 600;
+	}
+
+	.btn-toggle {
+		margin-bottom: 40px;
+	}
+
+	.btn-toggle .btn {
+		padding: 7px 22px;
+		margin-right: 2px;
+		color: #000;
+		border-radius: 3px;
+		font-weight: 600;
+		background-color: #fff;
+	}
+
+	.active {
+		color: #42a826;
+		border: 2px solid #42a826;
+	}
+
+	.swiper-slide {
+		padding: 20px;
+		padding-bottom: 28px;
+		background-color: #fff;
+		width: 270px;
+	}
+
+	.block-imgs {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	hr {
+		margin-top: 21px;
+		margin-bottom:13px;
+		width: 61px;
+		height: 2px;
+		background-color: #43aa26;
+	}
+	.big {
+		margin: 0 10px;
+		display: inline-block;
+		font-family: "Cuprum", "Roboto","Arial",sans-serif;
+		font-size:36px;
+	}
+	p {
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.swiper-slide .btn {
+		width: 190px;
+		padding-bottom: 6px;
+ 		box-shadow: inset 0px -3px 0px 0px rgba(44, 138, 18, 1);
+		border-radius: 0;
+
+		&:hover {
+			color: #43aa26;
+			background-color: #fff;
+			outline:2px solid #43aa26;
+			box-shadow: none;
+		}
+	}
+}
+
+.line {
+	margin-top: 42px;
+	margin-bottom: 39px;
+}
+
+#popular {
+
+	.container {
+		padding-left: 32px;
+	}
+	h2 {
+		margin-bottom: 33px;
+		font-size: 36/16 + 0rem;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-family: "Cuprum", "Roboto","Arial",sans-serif;	
+	}
+
+	.content-block {
+		padding: 31px 46px;
+		padding-right: 8px;
+		background-color: #fff;
+	}
+
+	.slider {
+		margin-right: 14px;
+		width: 300px;
+	}
+	.swiper-wrapper {
+		padding-right: 20px;
+	}
+	
+	.gallery-top  {
+		margin-bottom: 13px;
+	}
+
+	.gallery-top .swiper-slide {
+		height: 250px;
+	}
+
+	.gallery-thumbs .swiper-slide {
+		width: 70px;
+		height: 60px;
+	}
+	
+	.content {
+		padding-left: 6px;
+		font-size: 1rem;
+		line-height: 1.1rem;
+		color: #2f3131;
+		width: 50%;
+
+		p:nth-child(n+2) {
+			font-size: 14px;
+			    line-height: 1.1rem;
+			    margin-top: 19px;
+		}
+
+		p:last-child {
+			margin-top: 13px;	
+		}
+	}
+	img {
+		width: 100%;
+	}
+
+	.swiper-button-next {
+		padding-top: 15px;
+		background-image: none;
+		background-color: #fff;
+		right: 0;
+		height: 57px;
+    	top: 36%;
+
+    	svg {
+    		height: 30px;
+    	}
+
+    	&:hover  svg {
+    			fill:#43aa26;
+    		}
+	}
+
+	.swiper-button-prev {
+		padding-top: 15px;
+		top: 36%;
+		background-image: none;
+		left: 0;
+
+		svg {
+    		height: 30px;
+    	}
+
+    &:hover  svg {
+    			fill:#43aa26;
+    		}
+	}
+
+    
+
+ 
+
+}
+
+ 
+
+
+
+.b-b {
+	background:  red;
+}
+ 
+ 
